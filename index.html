@@ -5,21 +5,20 @@
     <meta charset="UTF-8">
 
     <title>Crystal Collector</title>
-
+    <style type="assets/css/style.css"></style>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
 </head>
 
 <body>
+    <div class="jumbotron">
     <main id="container">
         <h1 id="header">
             Crystal Collector Yall!!
         </h1>
 
-         <!-- <p id="Instructions">
+         <p id="Instructions">
             <h3>
                 <p>You will be given a random number at the start of the game.</p>
                 <p>There are 4 crystals below. By clicking on a crystal you will add a specific amount of points to your
@@ -29,14 +28,21 @@
                 <p>The value of each crystl is hidden fromyou until you click on it.</p>
                 <p>Each time when the game starts, the game will change the values of each crystal.</p>
             </h3>
-        </p> -->
+        </p>
+    </div>
+<hr>
+
         <p id="result"></p>
-        <div class="crystals">
+        <div id="crystals">
+            <img class="yellow" src="assets/images/yellow.png">
+            <img class="green" src="assets/images/green.png">
+            <img class="red" src="assets/images/red.png">
+            <img class="blue" src="assets/images/blue.png">
 
         </div>
 
-        <p id= "win"></p>
-        <p id= "lose"></p>
+        <p id= "win">Wins:</p>
+        <p id= "lose">Losses:</p>
         <div id="random-number"></div>
     </main>
 

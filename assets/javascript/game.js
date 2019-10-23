@@ -1,71 +1,17 @@
-var random_result;
-var lost = 0;
-var win = 0;
-var previous = 0;
+//create an onclick event to respond to button click
 
-// $(".crystal").attr('class');
-var startGame = function () {
+//create code to repond to event to generate a random number to crystal
 
-    $(".crystals").empty();
+$("button.continue").html("Next Step...")
 
-random_result = Math.floor(Math.random() * 101) + 19;
+//Here I'd create a document ready function that starts the game upon opening the app
 
-console.log(random_result);
+//afterthat I create the variables for the crystals that use the math.random function, giving the crystals a random number from 1 to 10
 
-$("#result").html('Random Result: ' + random_result);
+//will need to create a variable that also adds to the html showing the result of an on click event with the crystal
 
-for(var i = 0; i < 4; i++){
+//variable will be created for the random number that will be generated from 19-120
 
-    var random = Math.floor(Math.random() * 11) + 1;
+//I would need to create a function that will be an if statement that shows what happenes when our crystal counter is equal to random number and adds to our wins, else showing that if we go over the random number we lose also adding to our losses p tag
 
-    var crystal = $("<div>");
-    crystal.attr({
-        "class": 'crystal',
-        "data-random": random
-    });
-
-    crystal.html(random);
-
-    $(".crystals").append(crystal);
-
-}}
-
-startGame();
-
-
-$(".crystal").on('click', function () {
-
-    var num = parseInt($(this).attr('data-random'));
-
-    previous += num;
-
-    console.log(previous);
-
-    if(previous > random_result){
-        
-        lost++;
-        $("#lost").html(lost);
-        previous = 0;
-
-        startGame();
-        console.log("You lost");
-    }
-    else if(previous === random_result){
-
-        win++;
-        $("#lost").html(lost);
-        previous = 0;
-
-        startGame();
-        console.log("You win!!")
-    }
-
-    console.log(previous);
-    // console.log($(this).attr('data-random'));
-
-});
-
-// a game with 4 crystals
- // every crystal needs to have a randnum
- //that num should generate every single time win or loss
- 
+//Will need to create a reset function that when we win or lose resets the random number appended to the 4 crystals as well as the random result
